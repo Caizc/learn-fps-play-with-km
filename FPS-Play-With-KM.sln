@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{9B6FE43F-E240-BFE6-8332-FA735266799B}") = "FPS-Play-With-KM", "Assembly-CSharp.csproj", "{250C6CC7-07D2-21C1-0E78-868109DCA882}"
+EndProject
+Project("{9B6FE43F-E240-BFE6-8332-FA735266799B}") = "FPS-Play-With-KM", "Assembly-CSharp-Editor-firstpass.csproj", "{676AFBE8-45B7-6611-C302-0D2F7CE07B2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{250C6CC7-07D2-21C1-0E78-868109DCA882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{250C6CC7-07D2-21C1-0E78-868109DCA882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{250C6CC7-07D2-21C1-0E78-868109DCA882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{250C6CC7-07D2-21C1-0E78-868109DCA882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{676AFBE8-45B7-6611-C302-0D2F7CE07B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{676AFBE8-45B7-6611-C302-0D2F7CE07B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{676AFBE8-45B7-6611-C302-0D2F7CE07B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{676AFBE8-45B7-6611-C302-0D2F7CE07B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
