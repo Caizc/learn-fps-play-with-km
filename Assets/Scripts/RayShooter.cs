@@ -6,13 +6,16 @@ public class RayShooter : MonoBehaviour
 
     private Camera _camera;
 
+    [SerializeField]
+    private GameObject fireballPrefab;
+
     // Use this for initialization
     void Start()
     {
         _camera = this.GetComponent<Camera>();
 
-        // Cursor.lockState = CursorLockMode.Locked;
-        // Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     /// <summary>
@@ -46,7 +49,10 @@ public class RayShooter : MonoBehaviour
 
                 if (null != target)
                 {
-                    target.ReactToHit();
+                    GameObject _fireball = Instantiate(fireballPrefab) as GameObject;
+                    _fireball.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    _fireball.transform.position = this.transform.TransformPoint(Vector3.forward * 1.5f);
+                    _fireball.transform.rotation = this.transform.rotation;
                 }
                 else
                 {

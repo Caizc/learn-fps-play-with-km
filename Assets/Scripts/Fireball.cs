@@ -3,7 +3,7 @@
 public class Fireball : MonoBehaviour
 {
 
-    public float speed = 5.0f;
+    public float speed = 8.0f;
     public int damage = 1;
 
     // Use this for initialization
@@ -25,10 +25,17 @@ public class Fireball : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         PlayerCharacter player = other.GetComponent<PlayerCharacter>();
+        ReactiveTarget enemy = other.GetComponent<ReactiveTarget>();
+
         if (null != player)
         {
             Debug.Log("Player hit!");
             player.Hurt(damage);
+        }
+        else if (null != enemy)
+        {
+            Debug.Log("Enemy die!");
+            enemy.ReactToHit();
         }
 
         Destroy(this.gameObject);
