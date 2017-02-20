@@ -3,19 +3,6 @@ using UnityEngine;
 
 public class ReactiveTarget : MonoBehaviour
 {
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void ReactToHit()
     {
         WanderingAI behaviour = this.GetComponent<WanderingAI>();

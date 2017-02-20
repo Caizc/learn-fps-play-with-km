@@ -49,14 +49,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BasicUI.cs" />
      <Compile Include="Assets\Scripts\FPSInput.cs" />
      <Compile Include="Assets\Scripts\Fireball.cs" />
+     <Compile Include="Assets\Scripts\GameEvent.cs" />
+     <Compile Include="Assets\Scripts\Messenger.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\PlayerCharacter.cs" />
      <Compile Include="Assets\Scripts\RayShooter.cs" />
      <Compile Include="Assets\Scripts\ReactiveTarget.cs" />
      <Compile Include="Assets\Scripts\SceneController.cs" />
+     <Compile Include="Assets\Scripts\SettingsPopup.cs" />
      <Compile Include="Assets\Scripts\Spin.cs" />
+     <Compile Include="Assets\Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\WanderingAI.cs" />
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>

@@ -1,21 +1,20 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RayShooter : MonoBehaviour
 {
-
     private Camera _camera;
 
     [SerializeField]
     private GameObject fireballPrefab;
 
-    // Use this for initialization
     void Start()
     {
         _camera = this.GetComponent<Camera>();
 
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
     }
 
     /// <summary>
@@ -31,10 +30,9 @@ public class RayShooter : MonoBehaviour
         GUI.Label(new Rect(posX, posY, size, size), "*");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             Vector3 point = new Vector3(_camera.pixelWidth / 2, _camera.pixelHeight / 2, 0);
 

@@ -2,7 +2,6 @@
 
 public class MouseLook : MonoBehaviour
 {
-
     public enum RotationAxes
     {
         MouseXAndY = 0,
@@ -21,13 +20,6 @@ public class MouseLook : MonoBehaviour
     private float _rotationX = 0;
     private float _rotationY = 0;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         switch (axes)
@@ -58,7 +50,6 @@ public class MouseLook : MonoBehaviour
 
             default:
                 break;
-
         }
     }
 }

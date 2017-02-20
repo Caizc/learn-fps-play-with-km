@@ -2,7 +2,7 @@
 
 public class WanderingAI : MonoBehaviour
 {
-
+    public const float baseSpeed = 2.0f;
     public float speed = 2.0f;
     public float obstacleRange = 3.0f;
 
@@ -17,13 +17,21 @@ public class WanderingAI : MonoBehaviour
         this._isAlive = isAlive;
     }
 
-    // Use this for initialization
+    void Awake()
+    {
+        Messenger<float>.AddListener(GameEvent.SPEED_CHANGED, OnSpeedChanged);
+    }
+
+    void OnDestroy()
+    {
+        Messenger<float>.RemoveListener(GameEvent.SPEED_CHANGED, OnSpeedChanged);
+    }
+
     void Start()
     {
         _isAlive = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!_isAlive)
@@ -53,5 +61,10 @@ public class WanderingAI : MonoBehaviour
                 this.transform.Rotate(0, angle, 0);
             }
         }
+    }   
+
+    private void OnSpeedChanged(float value)
+    {
+        speed = baseSpeed * value;
     }
 }

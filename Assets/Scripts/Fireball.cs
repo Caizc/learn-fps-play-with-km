@@ -6,13 +6,6 @@ public class Fireball : MonoBehaviour
     public float speed = 8.0f;
     public int damage = 1;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         this.transform.Translate(0, 0, speed * Time.deltaTime);
@@ -36,6 +29,8 @@ public class Fireball : MonoBehaviour
         {
             Debug.Log("Enemy die!");
             enemy.ReactToHit();
+
+            Messenger.Broadcast(GameEvent.ENEMY_HIT);
         }
 
         Destroy(this.gameObject);
