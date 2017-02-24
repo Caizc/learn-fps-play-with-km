@@ -2,7 +2,6 @@
 
 public class Fireball : MonoBehaviour
 {
-
     public float speed = 8.0f;
     public int damage = 1;
 
@@ -11,10 +10,6 @@ public class Fireball : MonoBehaviour
         this.transform.Translate(0, 0, speed * Time.deltaTime);
     }
 
-    /// <summary>
-    /// OnTriggerEnter is called when the Collider other enters the trigger.
-    /// </summary>
-    /// <param name="other">The other Collider involved in this collision.</param>
     void OnTriggerEnter(Collider other)
     {
         PlayerCharacter player = other.GetComponent<PlayerCharacter>();

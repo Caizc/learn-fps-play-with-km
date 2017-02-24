@@ -8,6 +8,12 @@ public class RayShooter : MonoBehaviour
 
     [SerializeField]
     private GameObject fireballPrefab;
+    [SerializeField]
+    private AudioSource soundSource;
+    [SerializeField]
+    private AudioClip hitWallSound;
+    [SerializeField]
+    private AudioClip hitEnemySound;
 
     void Start()
     {
@@ -17,10 +23,6 @@ public class RayShooter : MonoBehaviour
         // Cursor.visible = false;
     }
 
-    /// <summary>
-    /// OnGUI is called for rendering and handling GUI events.
-    /// This function can be called multiple times per frame (one call per event).
-    /// </summary>
     void OnGUI()
     {
         int size = 12;
@@ -51,10 +53,14 @@ public class RayShooter : MonoBehaviour
                     _fireball.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                     _fireball.transform.position = this.transform.TransformPoint(Vector3.forward * 1.5f);
                     _fireball.transform.rotation = this.transform.rotation;
+
+                    soundSource.PlayOneShot(hitEnemySound);
                 }
                 else
                 {
                     StartCoroutine(SphereIndicator(hitInfo.point));
+
+                    soundSource.PlayOneShot(hitWallSound);
                 }
             }
         }

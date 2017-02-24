@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{250C6CC7-07D2-21C1-0E78-868109DCA882}</ProjectGuid>
+    <ProjectGuid>{B2516D9F-0C09-1984-C546-67051A50987C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -50,10 +50,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BasicUI.cs" />
+     <Compile Include="Assets\Scripts\Events\GameEvent.cs" />
+     <Compile Include="Assets\Scripts\Events\Messenger.cs" />
      <Compile Include="Assets\Scripts\FPSInput.cs" />
      <Compile Include="Assets\Scripts\Fireball.cs" />
-     <Compile Include="Assets\Scripts\GameEvent.cs" />
-     <Compile Include="Assets\Scripts\Messenger.cs" />
+     <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\IGameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\ManagerStatus.cs" />
+     <Compile Include="Assets\Scripts\Managers\Managers.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\PlayerCharacter.cs" />
      <Compile Include="Assets\Scripts\RayShooter.cs" />
@@ -63,9 +67,6 @@
      <Compile Include="Assets\Scripts\Spin.cs" />
      <Compile Include="Assets\Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\WanderingAI.cs" />
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -77,9 +78,6 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
